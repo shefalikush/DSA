@@ -1,4 +1,5 @@
 // Greedy approach
+// single pass, no backtracking
 
 #include <stdio.h>
 #include <vector>
