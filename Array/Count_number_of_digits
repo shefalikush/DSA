@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+
+
+int countDigits(int num,int* rev)
+{
+int count=0;
+int d=0;
+*rev=0;
+while(num>0)
+{
+    int d=num%10;
+    num=num/10;
+    *rev=(10 * (*rev)) + d;
+    count++;
+
+}
+return count;
+}
+int main()
+{   int reverseNum;
+    int num=234;
+    int total_no_of_digits=countDigits(num,&reverseNum);
+    if(num==reverseNum){
+    cout<<"Number is a plaindrome"<<endl;
+    }
+    else{
+    cout<<"Number is not a plaindrom"<<endl;
+    }
+    cout<< "Number of digits: "<< total_no_of_digits<< endl;
+    cout<< "reverse number: "<< reverseNum <<endl;
+}
